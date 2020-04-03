@@ -25,12 +25,16 @@ export default class GalaxySNote7 extends React.Component {
   }
 
   exclaim = () => {
-    if (this.state.panicked) return
-    this.exclaimAudio.play()
-    this.squeelAudio.play()
+    if (this.state.panicked) {
+      this.exclaimAudio.play()
+      this.squeelAudio.play()
+    }
+    return
   }
 
-  panic = () => (<img id="galaxy-exclamation" className="exclamation" src={exclamation} alt="" />)
+  panic = () => (
+    <img id="galaxy-exclamation" className="exclamation" src={exclamation} alt="" />
+  )
 
   render() {
     return(
